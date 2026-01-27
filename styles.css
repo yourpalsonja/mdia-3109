@@ -60,10 +60,15 @@
 
 /* Sunrise animation */
 body {
-    background: skyblue;
+    background: navy;
     height: 200vh;
     margin: 0;
     padding: 0;
+    transition: background 2s;
+}
+
+body.rise {
+    background: skyblue;
 }
 
 .cloud {
@@ -83,7 +88,7 @@ body {
     width: 100vw;
     height: 200vh;
     position: absolute;
-    top: 80vh;
+    top: 70vh;
     z-index: 10;
 }
 
@@ -92,12 +97,12 @@ body {
     height: 200px;
     background: yellow;
     position: absolute;
-    top: 90vh;
+    top: 120vh;
     left: 20%;
-    transition: top 2s;
     border-radius: 50%;
+    transition: all 2s;
 }
 
-.sun.sunrise {
-    top: 70vh;
+.sun.rise {
+    top: 80vh;
 }
