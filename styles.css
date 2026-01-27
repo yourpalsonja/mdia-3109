@@ -60,15 +60,33 @@
 
 /* Sunrise animation */
 body {
-    background: navy;
-    height: 200vh;
+    background: rgba(15, 47, 79, 1);
+    height: 150vh;
     margin: 0;
     padding: 0;
-    transition: background 2s;
 }
 
 body.rise {
-    background: skyblue;
+    animation-name: sunrise;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sunrise {
+    20% {
+        background: rgba(131, 58, 180, 1);
+    }
+
+    50% {
+        background: rgba(245, 135, 135, 1);
+    }
+
+    70% {
+        background: rgba(252, 176, 69, 1);
+    }
+    100% {
+        background: rgba(32, 202, 232, 1);
+    }
 }
 
 .cloud {
@@ -86,19 +104,20 @@ body.rise {
 .horizon {
     background: green;
     width: 100vw;
-    height: 200vh;
+    height: 80vh;
     position: absolute;
-    top: 70vh;
+    top: 90vh;
     z-index: 10;
 }
 
 .sun {
-    width: 500px;
-    height: 200px;
+    width: 80vw;
+    height: 50vh;
     background: yellow;
     position: absolute;
     top: 120vh;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 50%;
     transition: all 2s;
 }
